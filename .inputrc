@@ -1,5 +1,12 @@
+# editing mode basha nastavljen na vi
 set editing-mode vi
+
+# jk je Escape v bashu
+#bind '"jk":"\e"'
 
 $if mode=vi
 "\e.":yank-last-arg
 $endif
+
+
+
