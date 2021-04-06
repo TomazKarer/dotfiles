@@ -2,11 +2,8 @@
 set editing-mode vi
 
 # jk je Escape v bashu
-#bind '"jk":"\e"'
+bind -m vi-insert '"jk": vi-movement-mode'
 
-$if mode=vi
-"\e.":yank-last-arg
-$endif
-
-
-
+#$if mode=vi
+#"\e.":yank-last-arg
+#$endif
