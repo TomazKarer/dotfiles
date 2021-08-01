@@ -76,6 +76,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   let g:coc_global_extensions = [
         \ 'coc-sh',
+        \ 'coc-pyright',
         \ ]
   "Vimspector
   Plug 'puremourning/vimspector'
@@ -88,3 +89,27 @@ call plug#end()
 
 " leader(,)-n opens NERDTree
 nnoremap <Leader>n :NERDTreeFocus<CR>
+
+
+""""""""""""""""""""""""  
+" COC section
+""""""""""""""""""""""""  
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
