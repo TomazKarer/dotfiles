@@ -1,0 +1,33 @@
+{
+	"name": "Vimium C",
+	"@time": "19. 2. 2021 10:12:25",
+	"time": 1613725945402,
+	"environment": {
+		"extension": "1.88.2",
+		"platform": "win",
+		"chrome": 88
+	},
+	"grabBackFocus": true,
+	"ignoreCapsLock": 2,
+	"keyMappings": [
+		"map <c-f> scrollFullPageDown",
+		"map <c-b> scrollFullPageUp",
+		"",
+		"unmap J",
+		"unmap K",
+		"",
+		"map K previousTab",
+		"map J nextTab",
+		"",
+		"unmap d",
+		"map d removeTab",
+		"",
+		"unmap x",
+		"unmap X",
+		"unmap T",
+		"unmap t",
+		"",
+		"map u restoreTab",
+		""
+	]
+}

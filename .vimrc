@@ -61,6 +61,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+  "VimWiki
+  Plug 'vimwiki/vimwiki'
   "FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   "Nerd tree
