@@ -19,6 +19,14 @@ require("packer").startup(
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
   end
 )
-
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {"lua"},
+    indent = {enable = true},
+    highlight = {enable = true}
+}
