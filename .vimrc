@@ -44,7 +44,7 @@ map <F5> :! ./build.sh
 """"""""""""""""""""""""  
 " vimwiki section
 """"""""""""""""""""""""  
-let g:vimwiki_list = [{'path': '/home/tomazk/Development/personal_wiki',
+let g:vimwiki_list = [{'path': '/home/tomazk/development/personal/personal_wiki',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 
 " vimWiki remaps forward, this is restoring it
@@ -65,10 +65,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'vimwiki/vimwiki'
   "FZF
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  "Nerd tree
-  Plug 'preservim/nerdtree'
   "FZF vim
   Plug 'junegunn/fzf.vim'
+  "Nerd tree
+  Plug 'preservim/nerdtree'
   " Airline
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
